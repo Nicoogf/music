@@ -12,6 +12,18 @@ a{
     justify-content: center;
     flex-direction: column;
     margin: 5px auto;
+    transition:  all .3s ease-in-out;
+    background-color: rgba(244, 187, 146, 0);
+}
+
+.btn-body.active{
+    background-color: rgba(244, 187, 146, 1);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.btn-body:hover{
+    color:#fff
 }
 
 .btn-title{
@@ -19,3 +31,4 @@ a{
     font-weight: 600;
     font-size: 14px;
 }
+
