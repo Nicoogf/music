@@ -10,6 +10,7 @@ import './home.css'
 
 import Login from "../auth/login"
 import Sidebar from '../../components/sidebar'
+import { setClientToken } from '../../spotify'
 
 export default function Home() {
 
@@ -24,8 +25,10 @@ export default function Home() {
         const _token = (hash.split("&")[0].split("=")[1])
         window.localStorage.setItem("token" , _token)
         setToken( _token ) 
+        setClientToken(_token)
       }else{}      
       setToken( token ) 
+      setClientToken(token)
     },[])
 
   return ( 
