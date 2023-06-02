@@ -13,11 +13,13 @@ export default function Sidebar() {
   const [image, setImage] = useState(
     "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/02/08210136/barijho-14.jpg"
     );
+
   useEffect(()=>{
       apiClient.get("me").then(response =>{
-        console.log(response)
-      })
-  })
+        setImage(response.data.images[0].url);
+      });
+  },[]);
+  
   return (
     <div className='sidebar-container'>
 

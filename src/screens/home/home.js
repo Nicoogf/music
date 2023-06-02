@@ -31,6 +31,9 @@ export default function Home() {
       setClientToken(token)
     },[])
 
+
+    
+
   return ( 
     
     !token ? 
