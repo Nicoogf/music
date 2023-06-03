@@ -23,6 +23,7 @@
         rgba(54,69,98,0) 100%
         );
     transition: all .5s ease;
+    cursor: pointer;
 }
 
 .playlist-card:hover{
@@ -61,7 +62,7 @@
         right: 0;
         bottom:0;
     opacity: 0 ;
-    width: 100% ;
+    width: 84% ;
     height: 34% ;
     border-radius:20px;
     background: linear-gradient(180deg,
@@ -71,4 +72,6 @@
     display:flex;
     align-items:flex-end;
     justify-self: flex-end;
+    padding:0%;
+
 }
