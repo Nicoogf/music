@@ -4,7 +4,7 @@ import { BrowserRouter as Router,Routes,Route  } from 'react-router-dom'
 import Library from '../Library'
 import Feed from '../Feed'
 import Trending from '../Trending'
-import Player from '../Player'
+import Player from '../player/Index'
 import Favorites from '../Favorites'
 import './home.css'
 

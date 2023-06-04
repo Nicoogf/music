@@ -17,10 +17,12 @@ export default function Library() {
   },[]) 
 
   const navidate =useNavigate()
+  
 
   const playPlayList = (id) =>{
     navidate("/player" , { state: {id : id} } )
   }
+
 
   return (
 
