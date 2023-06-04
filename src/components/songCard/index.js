@@ -3,6 +3,9 @@ import "./songCard.css"
 
 export default function songCard() {
   return (
-    <div>index</div>
+    <div className="songCard-body">
+      <Albumimage url={album.images[0].url} />
+      <Albuminfo  album={album}/>
+    </div>
   )
 }
