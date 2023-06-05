@@ -12,11 +12,15 @@ export default function albumInfo({album} ) {
 
   return (
 
-    <div>
+    <div className="albumInfo-card">
 
     <div className='albumName-container'>
+      
+      <div className='marquee'>
 
       <p> {album.name+ "-" + artists?.join(",")} </p>
+
+      </div>
 
     </div>
 
