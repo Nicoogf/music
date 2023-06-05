@@ -35,7 +35,7 @@ export default function Player() {
       <div className="right-player-body">
         
         <SongCard album={currentTrack.album}/>
-          <Queue />
+          <Queue tracks={tracks} setCurrentIndex={setCurrentIndex}/>
       </div>
 
     </div>
