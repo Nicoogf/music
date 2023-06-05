@@ -1,10 +1,10 @@
 import React from 'react'
 import "./progresCircle.css"
 
-const Circle = ({color,percentage,size,stroke})=>{
+const Circle = ({color,percentage,size,strokeWidth})=>{
   const radius = size / 2  - 10 ;
-  const circ = ((2 * Math.PI * r) - 20 )
-  const strokePct = ((100 - Math.round(percentage) * circ ))*100;
+  const circ = ((2 * Math.PI * radius) - 20 )
+  const strokePct = ((100 - Math.round(percentage))* circ )*100;
 
   return (
 
@@ -16,7 +16,7 @@ const Circle = ({color,percentage,size,stroke})=>{
       stroke={strokePct !== circ ? color : "" }
       strokeWidth={strokeWidth}
       strokeDasharray = {circ}
-      strokeDashOff  { percentage ? strokePct : 0}
+      strokeDashOffset ={ percentage? strokePct : 0}
       strokeLinecap = "round" 
       ></circle>
       
@@ -30,6 +30,54 @@ export default function progresCircle({
   size,
   color}) {
   return (
-    <div>progresCircle</div>
+    <div className='progress-circle flex'>
+    
+      <svg width={size} height={size}>
+
+        <g>
+          <Circle 
+            strokeWidth={"0.4rem"}
+            color = "#384F73"
+            size = {size} />
+          <Circle 
+            strokeWidth={"0.6rem"}
+            color = {color}
+            percentage={percentage}
+            size = {size} />
+        </g>
+
+        <defs>
+
+          <clipPath id="myCircle">
+            <circle cx="50%" cy="50%" r={ (size/2) - 30 } fill= "#ffffff"></circle>
+          </clipPath>
+
+          <clipPath id="myInnerCircle">
+          <circle cx="50%" cy="50%" r={ (size/2) - 100 } fill= "#ffffff"></circle>
+          </clipPath>
+
+        </defs>
+
+        <image 
+          className={isPlaying ? "active" : ""} 
+          x={30} 
+          y={30} 
+          width={2*((size/2)-30)} 
+          heigth={2*((size/2)-30)} 
+          href="" 
+        />
+
+        <image 
+          className={isPlaying ? "active" : ""} 
+          x={100} 
+          y={100} 
+          width={2*((size/2)-100)} 
+          heigth={2*((size/2)-100)} 
+          href="" 
+        />
+
+      
+      </svg>
+    </div>
   )
 }
