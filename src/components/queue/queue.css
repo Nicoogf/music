@@ -37,6 +37,10 @@
     overflow-y: auto;
 }
 
+.queue-list:--webkit-scrollbar{
+    display: none;
+}
+
 .queue-item p{
     margin: 0px;
 }

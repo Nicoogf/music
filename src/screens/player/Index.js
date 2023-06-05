@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import "./player.css"
-import {useLocation} from "react-router-dom"
+import React, { useEffect, useState } from 'react' ;
+import "./player.css" ;
+import {useLocation} from "react-router-dom" ;
 import apiClient from '../../spotify';
-import SongCard from '../../components/songCard';
-import Queue from '../../components/queue/queue';
+import SongCard from '../../components/songCard' ;
+import Queue from '../../components/queue/queue' ;
+import AudioPlayer from '../../components/audioPlayer' ;
 
 export default function Player() {
 
@@ -24,11 +25,17 @@ export default function Player() {
     }
   },[location.state])
 
+  useEffect(()=>{
+    setCurrentTrack(tracks[currentIndex].track)
+  },[currentIndex,tracks]) ;
+
   return (
 
       <div className="screen-container flex">
 
       <div className="left-player-body">
+
+        <AudioPlayer currentTrack={currentTrack}/>
 
       </div>
 
