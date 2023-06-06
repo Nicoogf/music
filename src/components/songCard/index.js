@@ -1,13 +1,13 @@
-import React from 'react' ;
-import "./songCard.css" ;
-import Albumimage from "./albumImage" ;
-import Albuminfo from "./albumInfo"
+import React from "react";
+import AlbumImage from "./albumImage";
+import AlbumInfo from "./albumInfo";
+import "./songCard.css";
 
-export default function songCard( {album}) {
+export default function SongCard({ album }) {
   return (
     <div className="songCard-body flex">
-      <Albumimage url={album?.images[0]?.url} />
-      <Albuminfo  album={album}/>
+      <AlbumImage url={album?.images[0]?.url} />
+      <AlbumInfo album={album} />
     </div>
-  )
+  );
 }

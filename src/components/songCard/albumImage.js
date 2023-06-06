@@ -1,23 +1,19 @@
-import React from 'react' ;
-import "./albumImage.css"
+import React from "react";
+import "./albumImage.css";
 
-export default function albumImage( {url} ) {
+export default function AlbumImage({ url }) {
   return (
+    <div className="albumImage flex">
 
-    <div>
+      <img src={url} alt="album art" className="albumImage-art" />
 
-    <div className='albumImage flex'>
+      <div className="albumImage-shadow">
 
-      <img src = {url} alt ="album art" className='albumImage-art'/>
+        <img src={url} alt="shadow" className="albumImage-shadow" />
 
-    </div>
-
-    <div className='albumImage-shadow'>
-
-      <img src = {url} alt ="shadow" className='albumImage-shadow'/>
+      </div>
 
     </div>
-
-    </div>
-  )
+  );
 }
+
