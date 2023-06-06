@@ -1,8 +1,10 @@
 import React from 'react'
 import "./audioPlayer.css"
 import ProgressCicle from "./progresCircle"
+import Controls from './controls';
+import WaveAnimation from './waveAnimation';
 
-export default function audioPlayer(currentTrack) {
+export default function audioPlayer(currentTrack, isPlaying) {
 
 const artists = [] ;
 currentTrack?.album?.artists.forEach(artist => {
@@ -26,17 +28,26 @@ currentTrack?.album?.artists.forEach(artist => {
         </div>
 
 
-        <div className='player-right-body'>
+        <div className='player-right-body flex'>
 
         <p className='song-title'> {currentTrack?.name} </p>  
         <p className='song-artist'> {artists.join(" | ")} </p>
-        <div className="player-right-bottom">
+        <div className="player-right-bottom flex">
 
+          <div className='song-duration flex'>
             <p className='duration'> 0:01 </p>
-
-            <WaveAnimation />
-
+            <WaveAnimation isPlaying={isPlaying} />
             <p className='duration'> 0:30 </p>
+          </div>
+
+          <Controls
+          /*  isPlaying={isPlaying}
+            setIsPlaying={setIsPlaying}
+            handleNext={handleNext}
+            handlePrev={handl*/
+          />
+
+           
 
         </div>
 

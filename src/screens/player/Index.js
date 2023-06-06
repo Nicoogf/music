@@ -35,7 +35,7 @@ export default function Player() {
 
       <div className="left-player-body">
 
-        <AudioPlayer currentTrack={currentTrack}/>
+        <AudioPlayer currentTrack={currentTrack} isPlaying={true}/>
 
       </div>
 
