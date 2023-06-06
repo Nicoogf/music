@@ -35,7 +35,12 @@ export default function Player() {
 
       <div className="left-player-body">
 
-        <AudioPlayer currentTrack={currentTrack} isPlaying={true}/>
+        <AudioPlayer 
+          currentTrack={currentTrack} 
+          total={tracks}
+          isPlaying={true} 
+          currentIndex={currentIndex} 
+          setCurrentIndex={setCurrentIndex}/>
 
       </div>
 
