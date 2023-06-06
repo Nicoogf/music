@@ -3,6 +3,13 @@ import "./audioPlayer.css"
 import ProgressCicle from "./progresCircle"
 
 export default function audioPlayer(currentTrack) {
+
+const artists = [] ;
+currentTrack?.album?.artists.forEach(artist => {
+  artists.push(artist.name)
+});
+
+
   return (
     <div className='player-body flex'>
 
@@ -11,7 +18,7 @@ export default function audioPlayer(currentTrack) {
             <ProgressCicle 
             percentage={75}
             isPlaying={true}
-            /*image={currentTrack.images[0]?.url}*/
+            image={currentTrack?.album?.images[0]?.url}
             size={300}
             color="#C96850"
             />
@@ -19,7 +26,21 @@ export default function audioPlayer(currentTrack) {
         </div>
 
 
-        <div className='player-right-body'></div>        
+        <div className='player-right-body'>
+
+        <p className='song-title'> {currentTrack?.name} </p>  
+        <p className='song-artist'> {artists.join(" | ")} </p>
+        <div className="player-right-bottom">
+
+            <p className='duration'> 0:01 </p>
+
+            <WaveAnimation />
+
+            <p className='duration'> 0:30 </p>
+
+        </div>
+
+        </div>        
         
     </div>
   )

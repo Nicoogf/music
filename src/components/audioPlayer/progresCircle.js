@@ -28,7 +28,8 @@ export default function progresCircle({
   isPlaying,
   /*image={currentTrack.images[0]?.url}*/
   size,
-  color}) {
+  color,
+  image}) {
   return (
     <div className='progress-circle flex'>
     
@@ -64,7 +65,8 @@ export default function progresCircle({
           y={30} 
           width={2*((size/2)-30)} 
           heigth={2*((size/2)-30)} 
-          href="" 
+          href="https://pngimg.com/uploads/vinyl/vinyl_PNG107.png" 
+          clipPath="#url(#myCircle)"
         />
 
         <image 
@@ -73,7 +75,8 @@ export default function progresCircle({
           y={100} 
           width={2*((size/2)-100)} 
           heigth={2*((size/2)-100)} 
-          href="" 
+          href={image} 
+          clipPath="(#myInnerCircle)"
         />
 
       
