@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react' ;
 import "./widgets.css"
 import apiClient from "../../spotify"
+import WidgetCard from "./widgetCard"
 
 export default function Widgets( {artist}) {
 
@@ -35,10 +36,18 @@ export default function Widgets( {artist}) {
   }, [id] ) ;
 
   return (
-    <div>
+    <div className='widgets-body flex'>
+
+      <WidgetCard title="Similar Artist" similar= {similar} />
+
+      <WidgetCard title="Made for you" similar= {featured} />
+
+      <WidgetCard title="New releases" similar= {newRelease} />
+
+    
 
 
-      
+
     </div>
   )
 }
