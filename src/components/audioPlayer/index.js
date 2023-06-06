@@ -34,16 +34,42 @@ export default function audioPlayer(currentTrack,currentIndex, setCurrentIndex ,
       }, [1000]
    )}
 
-   useEffect(()=>{
-    if(isPlaying && audioRef.current){
-      audioRef.current = new Audio (audioSrc)
+
+
+
+useEffect(()=>{
+
+if(audioRef.current.src){
+    if(isPlaying){
       audioRef.current.play();
       startTimer();
     }else{
       clearInterval(intervalRef.current)
-      audioPlayer.current.pause()
+      audioRef.current.pause()
     }
-   },[isPlaying])
+} else{
+  if(isPlaying){
+    audioRef.current = new Audio(audioSrc);
+    audioRef.current.play();
+    startTimer();
+  }else{
+    clearInterval(intervalRef.current)
+    audioRef.current.pause();
+   }
+  }
+},[isPlaying])
+   
+
+
+
+
+
+
+
+
+
+
+
 
    useEffect(()=>{
     audioRef.current.pause();
@@ -78,7 +104,7 @@ export default function audioPlayer(currentTrack,currentIndex, setCurrentIndex ,
    const handlePrev = () =>{
      if( currentIndex  -1 < 0){
        setCurrentIndex (total.length -1);
-      } else currentIndex(currentIndex - 1 )
+      } else setCurrentIndex(currentIndex - 1 )
      } 
 
    const addZero = (n) =>{
