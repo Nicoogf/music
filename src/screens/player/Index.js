@@ -44,7 +44,7 @@ export default function Player() {
           setCurrentIndex={setCurrentIndex}/>
 
           <Widgets
-          artistID={currentTrack?.track?.album}/>
+          artistID={currentTrack?.album?.artists[0]?.id}/>
 
       </div>
 

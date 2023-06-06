@@ -1,8 +1,16 @@
 import React from 'react'
 import "./widgetsEntry.css"
 
-export default function widgetsEntry() {
+export default function widgetsEntry( {title , subtitle , image}) {
   return (
-    <div>widgetsEntry</div>
+    <div className='entry-body flex'>
+
+      <img src={image} alt={title} className='entry-image' />
+
+      <div className='enrty-right-body flex'>
+        <p className='entry-title'> {title} </p>
+        <p className='entry-subtitle'> {subtitle} </p>
+      </div>
+    </div>
   )
 }
