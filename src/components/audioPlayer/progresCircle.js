@@ -1,5 +1,5 @@
 import React from "react";
-import "./progressCircle.css";
+import "./progresCircle.css";
 
 const Circle = ({ color, percentage, size, strokeWidth }) => {
   const radius = size / 2 - 10;

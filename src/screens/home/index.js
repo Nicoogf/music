@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "../../components/sidebar";
 import { setClientToken } from "../../spotify";
 import Login from "../auth/login";
-import Favorites from "../favorites";
-import Feed from "../feed";
-import Library from "../library";
-import Player from "../player";
+import Favorites from "../favorites/Favorites";
+import Feed from "../feed/Feed";
+import Library from "../library/index";
+import Player from "../player/Index";
 import Trending from "../trending/Trending";
 import "./home.css";
 

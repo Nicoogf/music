@@ -1,6 +1,6 @@
 import React from "react";
 import "./widgetCard.css";
-import WidgetEntry from "./widgetEntry";
+import WidgetEntry from "./widgetsEntry";
 import { IconContext } from "react-icons";
 import { FiChevronRight } from "react-icons/fi";
 

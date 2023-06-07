@@ -1,5 +1,5 @@
 import React from "react";
-import "./widgetEntry.css";
+import "./widgetsEntry.css";
 
 export default function WidgetEntry({ title, subtitle, image }) {
   return (

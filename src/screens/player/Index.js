@@ -3,7 +3,7 @@ import "./player.css";
 import { useLocation } from "react-router-dom";
 import apiClient from "../../spotify";
 import SongCard from "../../components/songCard";
-import Queue from "../../components/queue";
+import Queue from "../../components/queue/queue";
 import AudioPLayer from "../../components/audioPlayer";
 import Widgets from "../../components/widgets";
 
