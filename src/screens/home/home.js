@@ -7,7 +7,7 @@ import Favorites from "../favorites";
 import Feed from "../feed";
 import Library from "../library";
 import Player from "../player";
-import Trending from "../trending";
+import Trending from "../trending/Trending";
 import "./home.css";
 
 export default function Home() {
